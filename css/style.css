@@ -163,3 +163,119 @@ transition: transform 0.2s ease-in;
     /*translat Y goes up/down depending on the number; if minus, goes up.*/
     transform: translateY(-15px);
 }
+/*languages*/
+.footer .social a{
+    margin: 0 10px
+}
+/*Social*/
+.social{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.social .fab {
+    margin: 3px;
+    padding: 1px;
+    color: pink;
+}
+
+/*Features*/
+.features-head img,
+.docs-head img{
+    width: 200px;
+    justify-self: flex-end;
+}
+.features-sub-head img{
+    width: 300px;
+    justify-self: flex-end;
+}
+.features-main .card >i{
+margin-right: 20px;
+}
+.features-main .grid{
+    padding: 30px;
+}
+.features-main .container>:first-child{
+    grid-column: 1/ span 3;
+}
+.features-main .container>:nth-child(2){
+    grid-column: 1/ span 2;
+}
+/*Docs*/
+.docs-main h3{
+    margin: 20px 0;
+}
+.docs-main .grid{
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+}
+.docs-main nav li{
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px #ccc solid;
+}
+.docs-main a:hover{
+    font-weight: bold;
+}
+
+/*Tablets and under*/
+@media(max-width: 768px){
+    .grid,
+    .showcase .grid,
+    .stats .grid,
+    .cli .grid,
+    .cloud .grid{
+        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+    .showcase{
+        /*takes up the amount of the container and the form isn't over the text*/
+        height: auto;
+    }
+    .showcase-text{
+        text-align: center;
+        margin-top: 50px;  
+    }
+    .showcase-form{
+        justify-self: center;
+        margin: auto;
+    }
+    .cli .grid >*:first-child{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .btn-outline{
+        margin-top: 20px;
+    }
+}
+@media(min-width: 600px){
+    .showcase-form{
+        justify-self: center;
+        margin: auto;
+        width: 350px;
+    }
+    .cli .grid{
+        grid-template-rows: 1fr;
+    }
+}
+/*Mobile*/
+@media(max-width: 500px){
+    .navbar{
+        height:110px;
+    }
+    .navbar .flex{
+        /*as default it's set to a row; by putting it in column i make the items go one after another*/
+        flex-direction: column;
+    }
+    .navbar ul{
+        padding:10px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    .grid-footer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .showcase-form{
+        width: 100%;
+    }
+}
